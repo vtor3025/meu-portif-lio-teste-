@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.header {
+    background-color: #333333;
+    color: #f4f6f8;
+    text-align: center;
+    padding: 20px;
+}
+.menu {
+    text-align: center;
+    background-color: #333333;
+    padding: 10px;
+}
+.menu a {
+    color: #f4f6f8;
+    text-decoration: none;
+    margin: 10px;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.page {
+    display: none;
+}

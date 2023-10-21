@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+
+</head>
+<body>
+    <div class="header">
+        <h1>Meu Portfólio</h1>
+    </div>
+    <div class="menu">
+        <a href="#sobre">inicio</a>
+        <a href="#formacao">Formação Educacional</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contato">Contato</a>
+    </div>
+    <br> <br>
+    <h2> Fala galera, seja bem-vindo(a) ao meu site, venha  conhecer um pouco do Vitor Marques</h2>
+
+    <div class="container">
+        <div class="page" id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Meu nome é Vitor Borges Marques, tenho 22 anos e estou atualmente cursando o ensino superior em Análise e Desenvolvimento de Sistemas.
+                 Sou apaixonado por tecnologia desde criança e estou em busca de uma carreira na área, 
+                 atualmente trabalho como auxiliar de cartorio. sou uma pessoas que gosta de desafio 
+                e que gosta de explorar coisas novas.</p>
+        </div>
+        <div class="page" id="formacao">
+            <h2>Formação Educacional e Idiomas</h2>
+            <p> Ensino Médio completo <br> </br>
+                Cursando superior em Análise e Desenvolvimento de Sistemas</p>
+        </div>
+        <div class="page" id="portfolio">
+            <h2>Portfólio</h2>
+            <p>Confira algumas de minhas atividades <a href="https://github.com/vtor3025" target="_blank">GitHub</a>.</p>
+
+        </div>
+        <div class="page" id="contato">
+            <h2>Contato</h2>
+            <p>Entre em contato comigo preenchendo o formulário abaixo:</p>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br><br>
+                <input type="submit" value="Enviar">
+            </form>
+            
+            <!-- Links para redes sociais -->
+            <div class="redes-sociais">
+                <a href="https://https://www.facebook.com/vitor.borgesmarques?locale=pt_BR" target="_blank">instagram</a>
+                <a href="https://www.linkedin.com/in/vitor-borges-marques-5a2766188/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript para mostrar e ocultar as páginas ao clicar nos links do menu
+        const menuLinks = document.querySelectorAll('.menu a');
+        const pages = document.querySelectorAll('.page');
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetPageId = link.getAttribute('href').substring(1);
+                pages.forEach(page => {
+                    page.style.display = 'none';
+                });
+                document.getElementById(targetPageId).style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
